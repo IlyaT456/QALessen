@@ -33,6 +33,4 @@ public class BaseTest {
         attachments.addVideo();
 
     }
-
-
 }
