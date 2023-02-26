@@ -23,9 +23,10 @@ public class Properties {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
     }
 
-    public static void settingAllure() {
-        // Для подключения Allure отчета
+    public Properties settingAllure() {
+        // для подключения Allure отчета
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        return this;
     }
 
 

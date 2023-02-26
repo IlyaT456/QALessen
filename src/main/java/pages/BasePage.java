@@ -2,11 +2,8 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.impl.SelenideElementListIterator;
-import io.netty.handler.ssl.ApplicationProtocolConfig;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.*;
