@@ -1,5 +1,6 @@
+package steps;
+
 import com.codeborne.selenide.Selenide;
-import config.BaseTest;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import pages.BasePage;

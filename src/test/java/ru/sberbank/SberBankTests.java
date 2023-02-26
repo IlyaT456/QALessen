@@ -1,18 +1,16 @@
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.logevents.SelenideLogger;
+package ru.sberbank;
+
 import config.BaseTest;
-import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.BasePage;
+import steps.Selectors;
 
 public class SberBankTests extends BaseTest {
     Selectors selector = new Selectors();
+
     @Test
     @DisplayName("Проверка работы кнопки заявки 'Ипотека на новостройки'")
     public void sberBankMortgagTest() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         selector.openMainPage()
                 .categoryPanel("Ипотека")
                 .subcategoryMortgage("Ипотека на новостройки")
@@ -22,7 +20,6 @@ public class SberBankTests extends BaseTest {
     @Test
     @DisplayName("Проверка перехода на страницу 'Оплата услуг ЖКХ'")
     public void sberBankPaymentServices() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         selector.openMainPage()
                 .categoryPanel("Платежи")
                 .paymentServicesCategory()
@@ -33,7 +30,6 @@ public class SberBankTests extends BaseTest {
     @Test
     @DisplayName("Проверка ошибок в консоле")
     public void consoleShouldNotHaveErrorsTest() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         selector.openMainPage()
                 .consoleShouldNotHaveErrorsTest();
     }
@@ -41,7 +37,6 @@ public class SberBankTests extends BaseTest {
     @Test
     @DisplayName("Проверка соответсвие главного меню")
     public void сheckComplianceMainMenu() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         selector.openMainPage()
                 .сheckingComplianceMainMenu();
     }
@@ -49,7 +44,6 @@ public class SberBankTests extends BaseTest {
     @Test
     @DisplayName("Проверка соответсвие под меню вклади 'Ипотеки'")
     public void сheckComplianceSubstitutions() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         selector.openMainPage()
                 .categoryPanel("Ипотека")
                 .сheckingComplianceSubstitutionsMortgage();
